@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_12_042127) do
+ActiveRecord::Schema.define(version: 2020_09_12_051433) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -25,6 +25,28 @@ ActiveRecord::Schema.define(version: 2020_09_12_042127) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "gender"
+    t.date "birthday"
+    t.integer "performance"
+    t.text "profile"
+    t.decimal "evaluation", precision: 10
+    t.string "helper_job01"
+    t.string "helper_job02"
+    t.string "helper_job03"
+    t.string "helper_job04"
+    t.string "helper_job05"
+    t.string "helper_job06"
+    t.string "helper_job07"
+    t.string "helper_job08"
+    t.string "helper_job09"
+    t.string "helper_job10"
+    t.time "operating_time01"
+    t.time "operating_time02"
+    t.time "operating_time03"
+    t.integer "money"
+    t.integer "pool_money"
+    t.integer "point"
     t.index ["email"], name: "index_helpers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_helpers_on_reset_password_token", unique: true
   end
