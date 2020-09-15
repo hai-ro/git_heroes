@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_12_051433) do
+ActiveRecord::Schema.define(version: 2020_09_15_215545) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -69,6 +69,17 @@ ActiveRecord::Schema.define(version: 2020_09_12_051433) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "area"
+    t.string "website"
+    t.string "authorization01"
+    t.string "authorization02"
+    t.string "authorization03"
+    t.string "authorization04"
+    t.string "authorization05"
     t.index ["email"], name: "index_offices_on_email", unique: true
     t.index ["reset_password_token"], name: "index_offices_on_reset_password_token", unique: true
   end
