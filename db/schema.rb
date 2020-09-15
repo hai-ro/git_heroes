@@ -10,11 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_215545) do
+ActiveRecord::Schema.define(version: 2020_09_15_220151) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.date "birthday"
+    t.string "gender"
+    t.string "handicap01"
+    t.string "handicap02"
+    t.string "handicap03"
+    t.string "handicap04"
+    t.string "handicap05"
+    t.string "like01"
+    t.string "like02"
+    t.string "like03"
+    t.string "like04"
+    t.string "like05"
+    t.string "like06"
+    t.string "like07"
+    t.string "like08"
+    t.string "like09"
+    t.string "like10"
+    t.string "bad01"
+    t.string "bad02"
+    t.string "bad03"
+    t.string "bad04"
+    t.string "bad05"
+    t.string "bad06"
+    t.string "bad07"
+    t.string "bad08"
+    t.string "bad09"
+    t.string "bad10"
+    t.string "image"
+    t.string "adress"
+    t.text "area"
+    t.text "profile"
   end
 
   create_table "helpers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
