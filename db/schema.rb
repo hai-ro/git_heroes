@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_220259) do
+ActiveRecord::Schema.define(version: 2020_09_17_221649) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2020_09_17_220259) do
     t.string "expect"
     t.integer "office_id"
     t.integer "handicap_id"
-    t.integer "serivice_id"
+    t.integer "service_category_id"
     t.date "date"
     t.time "time"
   end
@@ -101,6 +101,8 @@ ActiveRecord::Schema.define(version: 2020_09_17_220259) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "room_id"
+    t.integer "helper_id"
+    t.integer "office_id"
   end
 
   create_table "offices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
