@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_221649) do
+ActiveRecord::Schema.define(version: 2020_09_28_093645) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 2020_09_17_221649) do
     t.integer "money"
     t.integer "pool_money"
     t.integer "point"
+    t.string "like"
+    t.string "special_skill"
     t.index ["email"], name: "index_helpers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_helpers_on_reset_password_token", unique: true
   end
@@ -126,6 +128,15 @@ ActiveRecord::Schema.define(version: 2020_09_17_221649) do
     t.string "authorization05"
     t.index ["email"], name: "index_offices_on_email", unique: true
     t.index ["reset_password_token"], name: "index_offices_on_reset_password_token", unique: true
+  end
+
+  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "text"
+    t.integer "helper_id"
+    t.integer "office_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
