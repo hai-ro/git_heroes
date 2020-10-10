@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_30_222125) do
+ActiveRecord::Schema.define(version: 2020_10_09_063317) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -100,7 +100,9 @@ ActiveRecord::Schema.define(version: 2020_09_30_222125) do
     t.integer "handicap_id"
     t.integer "service_category_id"
     t.date "date"
-    t.time "time"
+    t.time "start_time"
+    t.time "end_time"
+    t.string "image"
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
