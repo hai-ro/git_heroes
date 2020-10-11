@@ -70,3 +70,5 @@ gem 'hirb-unicode'
 #以上
 
 gem 'devise'
+
+gem 'kaminari'
