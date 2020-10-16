@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_09_063317) do
+ActiveRecord::Schema.define(version: 2020_10_16_035322) do
 
   create_table "handicaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -85,6 +85,9 @@ ActiveRecord::Schema.define(version: 2020_10_09_063317) do
     t.integer "like03"
     t.integer "like04"
     t.integer "like05"
+    t.string "uid"
+    t.string "provider"
+    t.string "image"
     t.index ["email"], name: "index_helpers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_helpers_on_reset_password_token", unique: true
   end
