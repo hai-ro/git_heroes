@@ -72,3 +72,6 @@ gem 'hirb-unicode'
 gem 'devise'
 
 gem 'kaminari'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
