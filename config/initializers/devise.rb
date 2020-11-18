@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'heroes.matching@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -267,14 +267,13 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
-
-  # ==> OmniAuth
+      
+        # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  #↓~/.bash_profileに記述した環境変数の読み込み
-  config.omniauth :facebook,ENV['FACEBOOK_CLIENT_ID'],ENV['FACEBOOK_CLIENT_SECRET']
-  config.omniauth :google_oauth2,ENV['GOOGLE_CLIENT_ID'],ENV['GOOGLE_CLIENT_SECRET']
+  config.omniauth :facebook, FACEBOOK_ID='3431573193584947', FACEBOOK_SECRET_KEY='a486c7da5a317ff6d1661b6aedd23303'
+  config.omniauth :google_oauth2, GOOGLE_ID='442730407188-snnp2jfchaldtsdmv6882rjiet1ldif1.apps.googleusercontent.com', GOOGLE_SECRET_KEY='lswOKod3BWkH1bsjTdhDO04P'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
